@@ -27,7 +27,7 @@ export DEFAULT_BIND_ADDRESS="0.0.0.0:8080"
 export BIND_ADDRESS="${BIND_ADDRESS:-${DEFAULT_BIND_ADDRESS}}"
 
 # Parse command line
-FORCE_CONF_UPDATE=0
+FORCE_CONF_UPDATE=1
 DRY_RUN=0
 
 while getopts "fdh" option
@@ -163,7 +163,7 @@ fi
 update_conf "${FORCE_CONF_UPDATE}" "${UWSGI_SETTINGS_PATH}" "/usr/local/searxng/dockerfiles/uwsgi.ini" "patch_uwsgi_settings"
 
 # make sure there are searxng settings
-update_conf "${FORCE_CONF_UPDATE}" "${SEARXNG_SETTINGS_PATH}" "/usr/local/searxng/dockerfiles/settings.yml" "patch_searxng_settings"
+update_conf "${FORCE_CONF_UPDATE}" "${SEARXNG_SETTINGS_PATH}" "/usr/local/searxng/searx/settings.yml" "patch_searxng_settings"
 
 # dry run (to update configuration files, then inspect them)
 if [ $DRY_RUN -eq 1 ]; then
