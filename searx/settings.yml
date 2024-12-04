@@ -186,7 +186,7 @@ outgoing:
   # point.
   pool_maxsize: 200
   # See https://www.python-httpx.org/http2/
-  enable_http2: true
+  enable_http2: false
   # uncomment below section if you want to use a custom server certificate
   # see https://www.python-httpx.org/advanced/#changing-the-verification-defaults
   # and https://www.python-httpx.org/compatibility/#ssl-configuration
@@ -206,7 +206,7 @@ outgoing:
   #      - http://proxy1:8080
   #      - http://proxy2:8080
   #
-  #  using_tor_proxy: true
+  using_tor_proxy: true
   #
   # Extra seconds to add in order to account for the time taken by the proxy
   #
