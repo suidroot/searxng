@@ -163,7 +163,7 @@ fi
 update_conf "${FORCE_CONF_UPDATE}" "${UWSGI_SETTINGS_PATH}" "/usr/local/searxng/dockerfiles/uwsgi.ini" "patch_uwsgi_settings"
 
 # make sure there are searxng settings
-update_conf "${FORCE_CONF_UPDATE}" "${SEARXNG_SETTINGS_PATH}" "/usr/local/searxng/searx/settings.yml" "patch_searxng_settings"
+update_conf "${FORCE_CONF_UPDATE}" "${SEARXNG_SETTINGS_PATH}" "/usr/local/searxng/dockerfiles/settings.yml" "patch_searxng_settings"
 
 # dry run (to update configuration files, then inspect them)
 if [ $DRY_RUN -eq 1 ]; then
