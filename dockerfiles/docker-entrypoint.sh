@@ -107,7 +107,9 @@ update_conf() {
     REF_CONF="$3"
     PATCH_REF_CONF="$4"
 
+    printf 'Copied %s to %s\n' "${REF_CONF}" "${CONF}"
     cp "${REF_CONF}" "${CONF}"
+    printf 'Patched %s\n' "${CONF}"
     $PATCH_REF_CONF "${CONF}"
 
     # if [ -f "${CONF}" ]; then
