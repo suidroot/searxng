@@ -27,7 +27,7 @@ export DEFAULT_BIND_ADDRESS="0.0.0.0:8080"
 export BIND_ADDRESS="${BIND_ADDRESS:-${DEFAULT_BIND_ADDRESS}}"
 
 # Parse command line
-FORCE_CONF_UPDATE=1
+FORCE_CONF_UPDATE=0
 DRY_RUN=0
 
 while getopts "fdh" option
@@ -42,7 +42,7 @@ do
             exit 0
             ;;
         *)
-            echo "unknow option ${option}"
+            echo "unknown option ${option}"
             exit 42
             ;;
     esac
@@ -107,32 +107,35 @@ update_conf() {
     REF_CONF="$3"
     PATCH_REF_CONF="$4"
 
-    if [ -f "${CONF}" ]; then
-        if [ "${REF_CONF}" -nt "${CONF}" ]; then
-            # There is a new version
-            if [ "$FORCE_CONF_UPDATE" -ne 0 ]; then
-                # Replace the current configuration
-                printf '⚠️  Automatically update %s to the new version\n' "${CONF}"
-                if [ ! -f "${OLD_CONF}" ]; then
-                    printf 'The previous configuration is saved to %s\n' "${OLD_CONF}"
-                    mv "${CONF}" "${OLD_CONF}"
-                fi
-                cp "${REF_CONF}" "${CONF}"
-                $PATCH_REF_CONF "${CONF}"
-            else
-                # Keep the current configuration
-                printf '⚠️  Check new version %s to make sure SearXNG is working properly\n' "${NEW_CONF}"
-                cp "${REF_CONF}" "${NEW_CONF}"
-                $PATCH_REF_CONF "${NEW_CONF}"
-            fi
-        else
-            printf 'Use existing %s\n' "${CONF}"
-        fi
-    else
-        printf 'Create %s\n' "${CONF}"
-        cp "${REF_CONF}" "${CONF}"
-        $PATCH_REF_CONF "${CONF}"
-    fi
+    cp "${REF_CONF}" "${CONF}"
+    $PATCH_REF_CONF "${CONF}"
+
+    # if [ -f "${CONF}" ]; then
+    #     if [ "${REF_CONF}" -nt "${CONF}" ]; then
+    #         # There is a new version
+    #         if [ "$FORCE_CONF_UPDATE" -ne 0 ]; then
+    #             # Replace the current configuration
+    #             printf '⚠️  Automatically update %s to the new version\n' "${CONF}"
+    #             if [ ! -f "${OLD_CONF}" ]; then
+    #                 printf 'The previous configuration is saved to %s\n' "${OLD_CONF}"
+    #                 mv "${CONF}" "${OLD_CONF}"
+    #             fi
+    #             cp "${REF_CONF}" "${CONF}"
+    #             $PATCH_REF_CONF "${CONF}"
+    #         else
+    #             # Keep the current configuration
+    #             printf '⚠️  Check new version %s to make sure SearXNG is working properly\n' "${NEW_CONF}"
+    #             cp "${REF_CONF}" "${NEW_CONF}"
+    #             $PATCH_REF_CONF "${NEW_CONF}"
+    #         fi
+    #     else
+    #         printf 'Use existing %s\n' "${CONF}"
+    #     fi
+    # else
+    #     printf 'Create %s\n' "${CONF}"
+    #     cp "${REF_CONF}" "${CONF}"
+    #     $PATCH_REF_CONF "${CONF}"
+    # fi
 }
 
 # searx compatibility: copy /etc/searx/* to /etc/searxng/*
