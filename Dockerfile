@@ -44,9 +44,13 @@ RUN apk add --no-cache -t build-dependencies \
     uwsgi \
     uwsgi-python3 \
     brotli \
+    tor \
+    curl \
  && pip3 install --break-system-packages --no-cache -r requirements.txt \
  && apk del build-dependencies \
  && rm -rf /root/.cache
+
+COPY torrc /etc/tor/torrc
 
 COPY --chown=searxng:searxng dockerfiles ./dockerfiles
 COPY --chown=searxng:searxng searx ./searx

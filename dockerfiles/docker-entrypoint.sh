@@ -173,6 +173,23 @@ fi
 
 unset MORTY_KEY
 
+# Start Tor
+printf '\nStarting Tor.. Please Wait..\n'
+tor &>/dev/null
+sleep 20
+printf '\n'
+
+# Check Tor
+printf 'Checking Tor Connectivity..\n'
+curl -x socks5h://localhost:9050 -s https://check.torproject.org/api/ip
+printf '\n\n'
+
+# Display IP Configuration
+printf 'IP Configuration:\n'
+ip a s eth0 | grep inet | awk '{print $2}'
+printf '\n'
+
+
 # Start uwsgi
 printf 'Listen on %s\n' "${BIND_ADDRESS}"
 exec uwsgi --master --uid searxng --gid searxng --http-socket "${BIND_ADDRESS}" "${UWSGI_SETTINGS_PATH}"
