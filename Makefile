@@ -50,8 +50,8 @@ search.checker.%: install
 	$(Q)./manage pyenv.cmd searxng-checker -v "$(subst _, ,$(patsubst search.checker.%,%,$@))"
 
 PHONY += test ci.test test.shell
-ci.test: test.yamllint test.black test.pyright test.pylint test.unit test.robot test.rst test.pybabel
-test:    test.yamllint test.black test.pyright test.pylint test.unit test.robot test.rst test.shell
+ci.test: test.yamllint test.black test.types.ci  test.pylint test.unit test.robot test.rst test.shell test.pybabel
+test:    test.yamllint test.black test.types.dev test.pylint test.unit test.robot test.rst test.shell
 test.shell:
 	$(Q)shellcheck -x -s dash \
 		dockerfiles/docker-entrypoint.sh
@@ -75,7 +75,7 @@ test.shell:
 # wrap ./manage script
 
 MANAGE += weblate.translations.commit weblate.push.translations
-MANAGE += data.all data.traits data.useragents data.locales
+MANAGE += data.all data.traits data.useragents data.locales data.currencies
 MANAGE += docs.html docs.live docs.gh-pages docs.prebuild docs.clean
 MANAGE += docker.build docker.push docker.buildx
 MANAGE += gecko.driver
@@ -83,8 +83,8 @@ MANAGE += node.env node.env.dev node.clean
 MANAGE += py.build py.clean
 MANAGE += pyenv pyenv.install pyenv.uninstall
 MANAGE += format.python
-MANAGE += test.yamllint test.pylint test.pyright test.black test.pybabel test.unit test.coverage test.robot test.rst test.clean
-MANAGE += themes.all themes.simple themes.simple.test pygments.less
+MANAGE += test.yamllint test.pylint test.black test.pybabel test.unit test.coverage test.robot test.rst test.clean test.themes test.types.dev test.types.ci
+MANAGE += themes.all themes.fix themes.test
 MANAGE += static.build.commit static.build.drop static.build.restore
 MANAGE += nvm.install nvm.clean nvm.status nvm.nodejs
 

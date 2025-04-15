@@ -192,8 +192,21 @@ def fetch_traits(engine_traits: EngineTraits):
     # pylint: disable=import-outside-toplevel
 
     from searx.network import get  # see https://github.com/searxng/searxng/issues/762
+    from searx.utils import gen_useragent
 
-    resp = get("https://www.bing.com/account/general")
+    headers = {
+        "User-Agent": gen_useragent(),
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+        "Accept-Language": "en-US;q=0.5,en;q=0.3",
+        "Accept-Encoding": "gzip, deflate, br",
+        "DNT": "1",
+        "Connection": "keep-alive",
+        "Upgrade-Insecure-Requests": "1",
+        "Sec-GPC": "1",
+        "Cache-Control": "max-age=0",
+    }
+
+    resp = get("https://www.bing.com/account/general", headers=headers)
     if not resp.ok:  # type: ignore
         print("ERROR: response from bing is not OK.")
 
@@ -210,7 +223,7 @@ def fetch_traits(engine_traits: EngineTraits):
         'da': 'dk',  # da --> da-dk
     }
 
-    for href in eval_xpath(dom, '//div[@id="language-section"]//li/a/@href'):
+    for href in eval_xpath(dom, '//div[@id="language-section-content"]//div[@class="languageItem"]/a/@href'):
         eng_lang = parse_qs(urlparse(href).query)['setlang'][0]
         babel_lang = map_lang.get(eng_lang, eng_lang)
         try:
@@ -240,7 +253,7 @@ def fetch_traits(engine_traits: EngineTraits):
     map_market_codes = {
         'zh-hk': 'en-hk',  # not sure why, but at M$ this is the market code for Hongkong
     }
-    for href in eval_xpath(dom, '//div[@id="region-section"]//li/a/@href'):
+    for href in eval_xpath(dom, '//div[@id="region-section-content"]//div[@class="regionItem"]/a/@href'):
         cc_tag = parse_qs(urlparse(href).query)['cc'][0]
         if cc_tag == 'clear':
             engine_traits.all_locale = cc_tag

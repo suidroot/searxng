@@ -5,27 +5,29 @@
 # watchakorn-18k <porton2559@gmail.com>, 2022.
 # return42 <markus.heiser@darmarit.de>, 2023.
 # yuttct <yuttct@yahoo.com>, 2024.
-# return42 <return42@users.noreply.translate.codeberg.org>, 2024.
-# abhabongse <abhabongse@users.noreply.translate.codeberg.org>, 2024.
-# tutakrab <tutakrab@users.noreply.translate.codeberg.org>, 2024.
-# sahussawud <sahussawud@users.noreply.translate.codeberg.org>, 2024.
-# saledai <saledai@users.noreply.translate.codeberg.org>, 2024.
+# return42 <return42@users.noreply.translate.codeberg.org>, 2024, 2025.
+# abhabongse <abhabongse@users.noreply.translate.codeberg.org>, 2024, 2025.
+# tutakrab <tutakrab@users.noreply.translate.codeberg.org>, 2024, 2025.
+# sahussawud <sahussawud@users.noreply.translate.codeberg.org>, 2024, 2025.
+# saledai <saledai@users.noreply.translate.codeberg.org>, 2024, 2025.
+# Anonymous <anonymous@users.noreply.translate.codeberg.org>, 2025.
+# yuttct <yuttct@users.noreply.translate.codeberg.org>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-11-24 11:51+0000\n"
-"PO-Revision-Date: 2024-11-26 13:07+0000\n"
-"Last-Translator: saledai <saledai@users.noreply.translate.codeberg.org>\n"
-"Language-Team: Thai <https://translate.codeberg.org/projects/searxng/searxng/"
-"th/>\n"
+"POT-Creation-Date: 2025-03-29 09:21+0000\n"
+"PO-Revision-Date: 2025-01-06 15:53+0000\n"
+"Last-Translator: sahussawud "
+"<sahussawud@users.noreply.translate.codeberg.org>\n"
 "Language: th\n"
+"Language-Team: Thai "
+"<https://translate.codeberg.org/projects/searxng/searxng/th/>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.8.1\n"
-"Generated-By: Babel 2.16.0\n"
+"Generated-By: Babel 2.17.0\n"
 
 #. CONSTANT_NAMES['NO_SUBGROUPING']
 #: searx/searxng.msg
@@ -173,7 +175,7 @@ msgid "Uptime"
 msgstr "ช่วงเวลาทำงาน"
 
 #. BRAND_CUSTOM_LINKS['ABOUT']
-#: searx/searxng.msg searx/templates/simple/base.html:50
+#: searx/searxng.msg searx/templates/simple/base.html:49
 msgid "About"
 msgstr "เกี่ยวกับ"
 
@@ -345,28 +347,28 @@ msgstr "ลบแล้ว"
 msgid "answered"
 msgstr "ตอบแล้ว"
 
-#: searx/webapp.py:332
+#: searx/webapp.py:312
 msgid "No item found"
 msgstr "ไม่พบรายการ"
 
-#: searx/engines/qwant.py:288
-#: searx/templates/simple/result_templates/images.html:23 searx/webapp.py:334
+#: searx/engines/qwant.py:291
+#: searx/templates/simple/result_templates/images.html:23 searx/webapp.py:314
 msgid "Source"
 msgstr "แหล่งที่มา"
 
-#: searx/webapp.py:336
+#: searx/webapp.py:316
 msgid "Error loading the next page"
 msgstr "เกิดข้อผิดพลาดขณะโหลดหน้าถัดไป"
 
-#: searx/webapp.py:495 searx/webapp.py:898
+#: searx/webapp.py:469 searx/webapp.py:875
 msgid "Invalid settings, please edit your preferences"
 msgstr "การตั้งค่าไม่ถูกต้อง โปรดแก้ไขการตั้งค่าของคุณ"
 
-#: searx/webapp.py:511
+#: searx/webapp.py:485
 msgid "Invalid settings"
 msgstr "การตั้งค่าไม่ถูกต้อง"
 
-#: searx/webapp.py:588 searx/webapp.py:670
+#: searx/webapp.py:562 searx/webapp.py:652
 msgid "search error"
 msgstr "ข้อผิดพลาดจากการค้นหา"
 
@@ -427,38 +429,30 @@ msgid "Suspended"
 msgstr "ถูกระงับ"
 
 #: searx/webutils.py:314
+#, python-brace-format
 msgid "{minutes} minute(s) ago"
 msgstr "{minutes} นาทีที่แล้ว"
 
 #: searx/webutils.py:315
+#, python-brace-format
 msgid "{hours} hour(s), {minutes} minute(s) ago"
 msgstr "{hours} ชั่วโมง {minutes} นาทีที่แล้ว"
 
-#: searx/answerers/random/answerer.py:76
-msgid "Random value generator"
-msgstr "ตัวสุ่มค่า"
-
-#: searx/answerers/random/answerer.py:77
+#: searx/answerers/random.py:69
 msgid "Generate different random values"
 msgstr "ทำการสุ่มค่าที่แตกต่างกัน"
 
-#: searx/answerers/statistics/answerer.py:50
-msgid "Statistics functions"
-msgstr "ฟังก์ชันเชิงสถิติ"
+#: searx/answerers/statistics.py:36
+#, python-brace-format
+msgid "Compute {func} of the arguments"
+msgstr ""
 
-#: searx/answerers/statistics/answerer.py:51
-msgid "Compute {functions} of the arguments"
-msgstr "คำนวณ {functions} จากอาร์กิวเมนต์"
-
-#: searx/engines/mozhi.py:57
-msgid "Synonyms"
-msgstr "คำเหมือน"
-
-#: searx/engines/openstreetmap.py:159
-msgid "Get directions"
-msgstr "ขอเส้นทาง"
+#: searx/engines/openstreetmap.py:158
+msgid "Show route in map .."
+msgstr ""
 
 #: searx/engines/pdbe.py:96
+#, python-brace-format
 msgid "{title} (OBSOLETE)"
 msgstr "{title} (ล้าสมัย)"
 
@@ -466,7 +460,7 @@ msgstr "{title} (ล้าสมัย)"
 msgid "This entry has been superseded by"
 msgstr "รายการนี้ถูกแทนที่โดย"
 
-#: searx/engines/qwant.py:290
+#: searx/engines/qwant.py:293
 msgid "Channel"
 msgstr "ช่องทาง"
 
@@ -487,7 +481,8 @@ msgstr "คลิก"
 msgid "Language"
 msgstr "ภาษา"
 
-#: searx/engines/semantic_scholar.py:78
+#: searx/engines/semantic_scholar.py:79
+#, python-brace-format
 msgid ""
 "{numCitations} citations from the year {firstCitationVelocityYear} to "
 "{lastCitationVelocityYear}"
@@ -495,7 +490,7 @@ msgstr ""
 "การอ้างอิง {numCitations} รายการตั้งแต่ปี {firstCitationVelocityYear} ถึง"
 " {lastCitationVelocityYear}"
 
-#: searx/engines/tineye.py:45
+#: searx/engines/tineye.py:48
 msgid ""
 "Could not read that image url. This may be due to an unsupported file "
 "format. TinEye only supports images that are JPEG, PNG, GIF, BMP, TIFF or"
@@ -504,15 +499,16 @@ msgstr ""
 "ไม่สามารถอ่านภาพจากลิงก์ได้ เนื่องจากอาจเป็นไฟล์ประเภทที่ไม่รองรับ ระบบ "
 "TinEye รองรับเฉพาะไฟล์ประเภท JPEG, PNG, GIF, BMP, TIFF หรือ WebP เท่านั้น"
 
-#: searx/engines/tineye.py:51
+#: searx/engines/tineye.py:54
 msgid ""
 "The image is too simple to find matches. TinEye requires a basic level of"
 " visual detail to successfully identify matches."
 msgstr ""
-"รูปภาพนี้มีจุดสังเกตที่น้อยเกินไป ระบบของ TinEye นั้นต้องใช้ภาพที่มีลายละเอียดจุดเด่นที่ชัดเจนเล็กน้"
-"อย ถึงจะสามารถหาภาพที่คล้ายกันได้"
+"รูปภาพนี้มีจุดสังเกตที่น้อยเกินไป ระบบของ TinEye "
+"นั้นต้องใช้ภาพที่มีลายละเอียดจุดเด่นที่ชัดเจนเล็กน้อย "
+"ถึงจะสามารถหาภาพที่คล้ายกันได้"
 
-#: searx/engines/tineye.py:57
+#: searx/engines/tineye.py:59
 msgid "The image could not be downloaded."
 msgstr "ไม่สามารถดาวน์โหลดภาพนี้ได้"
 
@@ -524,95 +520,108 @@ msgstr "บันทึกการให้คะแนน"
 msgid "File quality"
 msgstr "คุณภาพไฟล์"
 
-#: searx/plugins/calculator.py:18
+#: searx/plugins/ahmia_filter.py:32
+msgid "Ahmia blacklist"
+msgstr ""
+
+#: searx/plugins/ahmia_filter.py:33
+msgid "Filter out onion results that appear in Ahmia's blacklist."
+msgstr ""
+
+#: searx/plugins/calculator.py:38
+msgid "Basic Calculator"
+msgstr ""
+
+#: searx/plugins/calculator.py:39
 msgid "Calculate mathematical expressions via the search bar"
 msgstr "คำนวณนิพจน์คณิตศาสตร์ผ่านช่องค้นหา"
 
-#: searx/plugins/hash_plugin.py:10
+#: searx/plugins/hash_plugin.py:34
+msgid "Hash plugin"
+msgstr ""
+
+#: searx/plugins/hash_plugin.py:35
 msgid "Converts strings to different hash digests."
 msgstr "แปลงสตริงเป็นแฮชย่อยที่ต่างกัน"
 
-#: searx/plugins/hash_plugin.py:38
+#: searx/plugins/hash_plugin.py:62
 msgid "hash digest"
 msgstr "แฮชย่อย"
 
-#: searx/plugins/hostnames.py:103
+#: searx/plugins/hostnames.py:123
 msgid "Hostnames plugin"
 msgstr "ชื่อโฮส ปลั๊กอิน"
 
-#: searx/plugins/hostnames.py:104
+#: searx/plugins/hostnames.py:124
 msgid "Rewrite hostnames, remove results or prioritize them based on the hostname"
 msgstr "ขียนชื่อโฮสต์ใหม่ ลบผลลัพธ์ หรือจัดลำดับความสำคัญตามชื่อโฮสต์"
 
-#: searx/plugins/oa_doi_rewrite.py:12
+#: searx/plugins/oa_doi_rewrite.py:55
 msgid "Open Access DOI rewrite"
 msgstr "เปิดการเข้าถึง DOI ที่เขียนใหม่"
 
-#: searx/plugins/oa_doi_rewrite.py:13
+#: searx/plugins/oa_doi_rewrite.py:56
 msgid ""
 "Avoid paywalls by redirecting to open-access versions of publications "
 "when available"
-msgstr ""
-"หลีกเลี่ยงข้อจำกัดการชำระเงินโดยเปลี่ยนเส้นทางไปรุ่นเอกสารที่เปิดให้ใช้งาน"
+msgstr "หลีกเลี่ยงข้อจำกัดการชำระเงินโดยเปลี่ยนเส้นทางไปรุ่นเอกสารที่เปิดให้ใช้งาน"
 
-#: searx/plugins/self_info.py:9
+#: searx/plugins/self_info.py:37
 msgid "Self Information"
 msgstr "ข้อมูลตนเอง"
 
-#: searx/plugins/self_info.py:10
+#: searx/plugins/self_info.py:39
 msgid ""
 "Displays your IP if the query is \"ip\" and your user agent if the query "
-"contains \"user agent\"."
+"is \"user-agent\"."
 msgstr ""
-"แสดง IP ของคุณหากคิวรีเป็นไอพี และตัวแทนจากผู้ใช้ของคุณหากคิวรีเป็นตัวแทนผู้ใช้"
 
-#: searx/plugins/self_info.py:28
+#: searx/plugins/self_info.py:52
 msgid "Your IP is: "
 msgstr "ไอพีของคุณคือ "
 
-#: searx/plugins/self_info.py:31
+#: searx/plugins/self_info.py:55
 msgid "Your user-agent is: "
 msgstr "user-agent ของคุณคือ "
 
-#: searx/plugins/tor_check.py:24
+#: searx/plugins/tor_check.py:42
 msgid "Tor check plugin"
 msgstr "ทอร์ตรวจสอบปลั๊กอิน"
 
-#: searx/plugins/tor_check.py:27
+#: searx/plugins/tor_check.py:44
 msgid ""
 "This plugin checks if the address of the request is a Tor exit-node, and "
 "informs the user if it is; like check.torproject.org, but from SearXNG."
 msgstr ""
 "ปลั๊กอินนี้จะตรวจสอบว่าที่อยู่ของคำขอเป็นโหนดทางออกของ Tor หรือไม่ "
-"และแจ้งให้ผู้ใช้ทราบว่าเป็นหรือไม่ เช่น check.torproject.org แต่มาจาก SearXNG"
+"และแจ้งให้ผู้ใช้ทราบว่าเป็นหรือไม่ เช่น check.torproject.org แต่มาจาก "
+"SearXNG"
 
-#: searx/plugins/tor_check.py:61
-msgid ""
-"Could not download the list of Tor exit-nodes from: "
-"https://check.torproject.org/exit-addresses"
+#: searx/plugins/tor_check.py:65
+msgid "Could not download the list of Tor exit-nodes from"
 msgstr ""
-"ไม่สามารถดาวน์โหลดรายการ Tor exit-nodes จาก: https://check.torproject.org"
-"/exit-addresses"
 
-#: searx/plugins/tor_check.py:77
-msgid ""
-"You are using Tor and it looks like you have this external IP address: "
-"{ip_address}"
-msgstr "คุณกำลังใช้ Tor และดูเหมือนว่าคุณมีที่อยู่ IP ภายนอกนี้: {ip_address}"
+#: searx/plugins/tor_check.py:72
+msgid "You are using Tor and it looks like you have the external IP address"
+msgstr ""
 
-#: searx/plugins/tor_check.py:85
-msgid "You are not using Tor and you have this external IP address: {ip_address}"
-msgstr "คุณไม่ได้ใช้ Tor และคุณมีที่อยู่ IP ภายนอกนี้: {ip_address}"
+#: searx/plugins/tor_check.py:76
+msgid "You are not using Tor and you have the external IP address"
+msgstr ""
 
-#: searx/plugins/tracker_url_remover.py:16
+#: searx/plugins/tracker_url_remover.py:37
 msgid "Tracker URL remover"
 msgstr "ลบตัวติดตาม URL"
 
-#: searx/plugins/tracker_url_remover.py:17
+#: searx/plugins/tracker_url_remover.py:38
 msgid "Remove trackers arguments from the returned URL"
 msgstr "ลบอาร์กิวเมนต์ตัวติดตามออกจากการส่งค่าคืนของ URL"
 
-#: searx/plugins/unit_converter.py:29
+#: searx/plugins/unit_converter.py:49
+msgid "Unit converter plugin"
+msgstr ""
+
+#: searx/plugins/unit_converter.py:50
 msgid "Convert between units"
 msgstr "แปลงหน่วย"
 
@@ -629,49 +638,49 @@ msgstr "ไปยัง %(search_page)s"
 msgid "search page"
 msgstr "หน้าค้นหา"
 
-#: searx/templates/simple/base.html:54
+#: searx/templates/simple/base.html:53
 msgid "Donate"
 msgstr "บริจาค"
 
-#: searx/templates/simple/base.html:58
+#: searx/templates/simple/base.html:57
 #: searx/templates/simple/preferences.html:156
 msgid "Preferences"
 msgstr "การตั้งค่า"
 
-#: searx/templates/simple/base.html:68
+#: searx/templates/simple/base.html:67
 msgid "Powered by"
 msgstr "ขับเคลื่อนโดย"
 
-#: searx/templates/simple/base.html:68
+#: searx/templates/simple/base.html:67
 msgid "a privacy-respecting, open metasearch engine"
 msgstr "เครื่องมือค้นหาเมตาแบบเปิดที่เคารพความเป็นส่วนตัว"
 
-#: searx/templates/simple/base.html:69
+#: searx/templates/simple/base.html:68
 #: searx/templates/simple/result_templates/packages.html:59
 msgid "Source code"
 msgstr "แหล่งที่เก็บโค้ด"
 
-#: searx/templates/simple/base.html:70
+#: searx/templates/simple/base.html:69
 msgid "Issue tracker"
 msgstr "ตัวติดตามปัญหา"
 
-#: searx/templates/simple/base.html:71 searx/templates/simple/stats.html:18
+#: searx/templates/simple/base.html:70 searx/templates/simple/stats.html:18
 msgid "Engine stats"
 msgstr "เครื่องมือสถิติ"
 
-#: searx/templates/simple/base.html:73
+#: searx/templates/simple/base.html:72
 msgid "Public instances"
 msgstr "อินสแตนซ์สาธารณะ"
 
-#: searx/templates/simple/base.html:76
+#: searx/templates/simple/base.html:75
 msgid "Privacy policy"
 msgstr "นโยบายความเป็นส่วนตัว"
 
-#: searx/templates/simple/base.html:79
+#: searx/templates/simple/base.html:78
 msgid "Contact instance maintainer"
 msgstr "ติดต่อผู้ดูแลอินสแตนซ์"
 
-#: searx/templates/simple/categories.html:26
+#: searx/templates/simple/categories.html:30
 msgid "Click on the magnifier to perform search"
 msgstr "คลิกที่แว่นขยายเพื่อทำการค้นหา"
 
@@ -759,63 +768,55 @@ msgstr "ตัวตรวจสอบการทดสอบล้มเหล
 msgid "Errors:"
 msgstr "ข้อผิดพลาด:"
 
-#: searx/templates/simple/preferences.html:162
+#: searx/templates/simple/preferences.html:163
 msgid "General"
 msgstr "ทั่วไป"
 
-#: searx/templates/simple/preferences.html:165
+#: searx/templates/simple/preferences.html:166
 msgid "Default categories"
 msgstr "หมวดหมู่เริ่มต้น"
 
-#: searx/templates/simple/preferences.html:190
+#: searx/templates/simple/preferences.html:194
 msgid "User interface"
 msgstr "ส่วนต่อประสานกับผู้ใช้"
 
-#: searx/templates/simple/preferences.html:211
+#: searx/templates/simple/preferences.html:217
 msgid "Privacy"
 msgstr "ความเป็นส่วนตัว"
 
-#: searx/templates/simple/preferences.html:224
+#: searx/templates/simple/preferences.html:232
 msgid "Engines"
 msgstr "เครื่องมือ"
 
-#: searx/templates/simple/preferences.html:226
+#: searx/templates/simple/preferences.html:234
 msgid "Currently used search engines"
 msgstr "เครื่องมือค้นหาที่ใช้อยู่ในปัจจุบัน"
 
-#: searx/templates/simple/preferences.html:234
+#: searx/templates/simple/preferences.html:243
 msgid "Special Queries"
 msgstr "การคิวรีพิเศษ"
 
-#: searx/templates/simple/preferences.html:240
+#: searx/templates/simple/preferences.html:251
 msgid "Cookies"
 msgstr "คุกกี้"
 
-#: searx/templates/simple/results.html:23
-msgid "Answers"
-msgstr "คำตอบ"
-
-#: searx/templates/simple/results.html:42
+#: searx/templates/simple/results.html:30
 msgid "Number of results"
 msgstr "จำนวนผลลัพธ์"
 
-#: searx/templates/simple/results.html:48
+#: searx/templates/simple/results.html:36
 msgid "Info"
 msgstr "ข้อมูล"
 
-#: searx/templates/simple/results.html:75
-msgid "Try searching for:"
-msgstr "ลองค้นหา:"
-
-#: searx/templates/simple/results.html:107
+#: searx/templates/simple/results.html:77
 msgid "Back to top"
 msgstr "กลับไปด้านบน"
 
-#: searx/templates/simple/results.html:125
+#: searx/templates/simple/results.html:95
 msgid "Previous page"
 msgstr "หน้าก่อนหน้านี้"
 
-#: searx/templates/simple/results.html:143
+#: searx/templates/simple/results.html:113
 msgid "Next page"
 msgstr "หน้าต่อไป"
 
@@ -927,9 +928,30 @@ msgstr "ทดสอบไม่ผ่าน"
 msgid "Comment(s)"
 msgstr "ความคิดเห็น"
 
+#: searx/templates/simple/answer/translations.html:12
+#: searx/templates/simple/preferences/answerers.html:8
+msgid "Examples"
+msgstr "ตัวอย่าง"
+
+#: searx/templates/simple/answer/translations.html:21
+msgid "Definitions"
+msgstr ""
+
+#: searx/templates/simple/answer/translations.html:30
+msgid "Synonyms"
+msgstr "คำเหมือน"
+
+#: searx/templates/simple/elements/answers.html:2
+msgid "Answers"
+msgstr "คำตอบ"
+
 #: searx/templates/simple/elements/apis.html:3
 msgid "Download results"
 msgstr "ดาวน์โหลดผลลัพธ์"
+
+#: searx/templates/simple/elements/corrections.html:2
+msgid "Try searching for:"
+msgstr "ลองค้นหา:"
 
 #: searx/templates/simple/elements/engines_msg.html:4
 msgid "Messages from the search engines"
@@ -1071,8 +1093,8 @@ msgid "Allow"
 msgstr "อนุญาต"
 
 #: searx/templates/simple/preferences/answerers.html:5
-msgid "Keywords"
-msgstr "คำสำคัญ"
+msgid "Keywords (first word in query)"
+msgstr ""
 
 #: searx/templates/simple/preferences/answerers.html:6
 #: searx/templates/simple/result_templates/packages.html:7
@@ -1082,10 +1104,6 @@ msgstr "ชื่อ"
 #: searx/templates/simple/preferences/answerers.html:7
 msgid "Description"
 msgstr "คำอธิบาย"
-
-#: searx/templates/simple/preferences/answerers.html:8
-msgid "Examples"
-msgstr "ตัวอย่าง"
 
 #: searx/templates/simple/preferences/answerers.html:13
 msgid "This is the list of SearXNG's instant answering modules."
@@ -1147,11 +1165,9 @@ msgstr "URL เพื่อกู้คืนการตั้งค่าข�
 
 #: searx/templates/simple/preferences/cookies.html:43
 msgid ""
-"Specifying custom settings in the preferences URL can be used to sync "
-"preferences across devices."
+"A URL containing your preferences. This URL can be used to restore your "
+"settings on a different device."
 msgstr ""
-"การระบุการตั้งค่าแบบกำหนดเองใน URL "
-"ค่ากำหนดสามารถใช้เพื่อซิงค์กับค่ากำหนดในอุปกรณ์ต่างๆได้"
 
 #: searx/templates/simple/preferences/cookies.html:46
 msgid "Copy preferences hash"
@@ -1165,11 +1181,15 @@ msgstr "แทรกแฮชการตั้งค่าที่คัดล
 msgid "Preferences hash"
 msgstr "การตั้งค่าแฮช"
 
-#: searx/templates/simple/preferences/doi_resolver.html:2
+#: searx/templates/simple/preferences/doi_resolver.html:1
+msgid "Digital Object Identifier (DOI)"
+msgstr ""
+
+#: searx/templates/simple/preferences/doi_resolver.html:6
 msgid "Open Access DOI resolver"
 msgstr "เปิดการเข้าถึงตัวแก้ไข DOI"
 
-#: searx/templates/simple/preferences/doi_resolver.html:14
+#: searx/templates/simple/preferences/doi_resolver.html:18
 msgid "Select service used by DOI rewrite"
 msgstr "เลือกบริการที่ใช้โดย DOI เขียนใหม่"
 
@@ -1355,6 +1375,26 @@ msgstr "ภาษาส่วนต่อประสาน"
 msgid "Change the language of the layout"
 msgstr "เปลี่ยนภาษาของเค้าโครง"
 
+#: searx/templates/simple/preferences/urlformatting.html:2
+msgid "URL formatting"
+msgstr ""
+
+#: searx/templates/simple/preferences/urlformatting.html:8
+msgid "Pretty"
+msgstr ""
+
+#: searx/templates/simple/preferences/urlformatting.html:13
+msgid "Full"
+msgstr ""
+
+#: searx/templates/simple/preferences/urlformatting.html:18
+msgid "Host"
+msgstr ""
+
+#: searx/templates/simple/preferences/urlformatting.html:23
+msgid "Change result URL formatting"
+msgstr ""
+
 #: searx/templates/simple/result_templates/code.html:13
 msgid "repo"
 msgstr "พื้นที่เก็บข้อมูล"
@@ -1377,7 +1417,7 @@ msgstr "ไซต์นี้ไม่ได้ให้คำอธิบาย
 
 #: searx/templates/simple/result_templates/files.html:38
 #: searx/templates/simple/result_templates/images.html:22
-#: searx/templates/simple/result_templates/torrent.html:11
+#: searx/templates/simple/result_templates/torrent.html:18
 msgid "Filesize"
 msgstr "ขนาดไฟล์"
 
@@ -1487,23 +1527,23 @@ msgstr "PDF"
 msgid "HTML"
 msgstr "HTML"
 
-#: searx/templates/simple/result_templates/torrent.html:6
+#: searx/templates/simple/result_templates/torrent.html:7
 msgid "magnet link"
 msgstr "ลิงก์แม่เหล็ก"
 
-#: searx/templates/simple/result_templates/torrent.html:7
+#: searx/templates/simple/result_templates/torrent.html:8
 msgid "torrent file"
 msgstr "ไฟล์ทอร์เรนต์"
 
-#: searx/templates/simple/result_templates/torrent.html:9
+#: searx/templates/simple/result_templates/torrent.html:13
 msgid "Seeder"
 msgstr "ผู้ที่แบ่งปันไฟล์"
 
-#: searx/templates/simple/result_templates/torrent.html:9
+#: searx/templates/simple/result_templates/torrent.html:14
 msgid "Leecher"
 msgstr "ผู้ที่ดาวน์โหลดไฟล์"
 
-#: searx/templates/simple/result_templates/torrent.html:13
+#: searx/templates/simple/result_templates/torrent.html:19
 msgid "Number of Files"
 msgstr "จำนวนไฟล์"
 
@@ -1691,3 +1731,61 @@ msgstr "ซ่อนวิดีโอ"
 
 #~ msgid "Start submiting a new issue on GitHub"
 #~ msgstr "เริ่มส่งฉบับใหม่บน GitHub"
+
+#~ msgid "dummy"
+#~ msgstr ""
+
+#~ msgid "Random value generator"
+#~ msgstr "ตัวสุ่มค่า"
+
+#~ msgid "Statistics functions"
+#~ msgstr "ฟังก์ชันเชิงสถิติ"
+
+#~ msgid "Compute {functions} of the arguments"
+#~ msgstr "คำนวณ {functions} จากอาร์กิวเมนต์"
+
+#~ msgid "Get directions"
+#~ msgstr "ขอเส้นทาง"
+
+#~ msgid ""
+#~ "Displays your IP if the query is"
+#~ " \"ip\" and your user agent if "
+#~ "the query contains \"user agent\"."
+#~ msgstr ""
+#~ "แสดง IP ของคุณหากคิวรีเป็นไอพี "
+#~ "และตัวแทนจากผู้ใช้ของคุณหากคิวรีเป็นตัวแทนผู้ใช้"
+
+#~ msgid ""
+#~ "Could not download the list of Tor"
+#~ " exit-nodes from: https://check.torproject.org"
+#~ "/exit-addresses"
+#~ msgstr ""
+#~ "ไม่สามารถดาวน์โหลดรายการ Tor exit-nodes จาก:"
+#~ " https://check.torproject.org/exit-addresses"
+
+#~ msgid ""
+#~ "You are using Tor and it looks "
+#~ "like you have this external IP "
+#~ "address: {ip_address}"
+#~ msgstr "คุณกำลังใช้ Tor และดูเหมือนว่าคุณมีที่อยู่ IP ภายนอกนี้: {ip_address}"
+
+#~ msgid ""
+#~ "You are not using Tor and you "
+#~ "have this external IP address: "
+#~ "{ip_address}"
+#~ msgstr "คุณไม่ได้ใช้ Tor และคุณมีที่อยู่ IP ภายนอกนี้: {ip_address}"
+
+#~ msgid "Keywords"
+#~ msgstr "คำสำคัญ"
+
+#~ msgid "/"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Specifying custom settings in the "
+#~ "preferences URL can be used to "
+#~ "sync preferences across devices."
+#~ msgstr ""
+#~ "การระบุการตั้งค่าแบบกำหนดเองใน URL "
+#~ "ค่ากำหนดสามารถใช้เพื่อซิงค์กับค่ากำหนดในอุปกรณ์ต่างๆได้"
+

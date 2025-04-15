@@ -4,12 +4,8 @@
 
 STATIC_BUILD_COMMIT="[build] /static"
 STATIC_BUILT_PATHS=(
-    'searx/static/themes/simple/css'
-    'searx/static/themes/simple/js'
-    'searx/static/themes/simple/src/generated/pygments.less'
-    'searx/static/themes/simple/img'
-    'searx/templates/simple/searxng-wordmark.min.svg'
-    'searx/templates/simple/icons.html'
+    'searx/static/themes/simple'
+    'client/simple/package-lock.json'
 )
 
 static.help(){
@@ -100,7 +96,8 @@ static.build.commit() {
     static.build.drop &>/dev/null
 
     (   set -e
-        # build the themes
+        # fix & build the themes
+	    themes.fix
         themes.all
 
         # add build files

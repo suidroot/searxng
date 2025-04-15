@@ -12,6 +12,7 @@
      favicon_resolver: ""
      default_lang: ""
      ban_time_on_fail: 5
+     max_page: 0
      max_ban_time_on_fail: 120
      suspended_times:
        SearxEngineAccessDenied: 86400
@@ -33,14 +34,21 @@
 ``autocomplete``:
   Existing autocomplete backends, leave blank to turn it off.
 
+  - ``360search``
+  - ``baidu``
+  - ``brave``
   - ``dbpedia``
   - ``duckduckgo``
   - ``google``
   - ``mwmbl``
-  - ``startpage``
-  - ``swisscows``
+  - ``quark``
   - ``qwant``
+  - ``seznam``
+  - ``sogou``
+  - ``stract``
+  - ``swisscows``
   - ``wikipedia``
+  - ``yandex``
 
 ``favicon_resolver``:
   To activate favicons in SearXNG's result list select a default
@@ -68,6 +76,11 @@
        - it-IT
        - fr
        - fr-BE
+
+``max_page``:
+  If engine supports paging, 0 means unlimited numbers of pages.  The value
+  is only applied if the engine itself does not have a max value that is
+  lower than this one.
 
 ``ban_time_on_fail``:
   Ban time in seconds after engine errors.

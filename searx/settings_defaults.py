@@ -235,8 +235,7 @@ SCHEMA = {
         'key': SettingsBytesValue((None, bytes), None),
         'proxify_results': SettingsValue(bool, False),
     },
-    'plugins': SettingsValue(list, []),
-    'enabled_plugins': SettingsValue((None, list), None),
+    'plugins': SettingsValue(dict, {}),
     'checker': {
         'off_when_debug': SettingsValue(bool, True, None),
         'scheduling': SettingsValue((None, dict), None, None),
@@ -245,8 +244,3 @@ SCHEMA = {
     'engines': SettingsValue(list, []),
     'doi_resolvers': {},
 }
-
-
-def settings_set_defaults(settings):
-    apply_schema(settings, SCHEMA, [])
-    return settings
