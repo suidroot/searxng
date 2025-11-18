@@ -3,8 +3,6 @@ general:
   instance_name: "searx_test"
 
 brand:
-  git_url: https://github.com/searxng/searxng
-  git_branch: master
   issue_url: https://github.com/searxng/searxng/issues
   new_issue_url: https://github.com/searxng/searxng/issues/new
   docs_url: https://docs.searxng.org
@@ -51,7 +49,6 @@ engines:
 doi_resolvers:
   oadoi.org: 'https://oadoi.org/'
   doi.org: 'https://doi.org/'
-  doai.io: 'https://dissem.in/'
   sci-hub.se: 'https://sci-hub.se/'
   sci-hub.st: 'https://sci-hub.st/'
   sci-hub.ru: 'https://sci-hub.ru/'
