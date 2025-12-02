@@ -1,5 +1,6 @@
 *
-
+!torrc
+!dockerfiles
 !container/entrypoint.sh
 !searx/**
 !requirements*.txt

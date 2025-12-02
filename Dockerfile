@@ -51,6 +51,8 @@ RUN apk add --no-cache -t build-dependencies \
  && apk del build-dependencies \
  && rm -rf /root/.cache
 
+RUN apk add --no-cache git
+
 COPY torrc /etc/tor/torrc
 
 COPY --chown=searxng:searxng dockerfiles ./dockerfiles
