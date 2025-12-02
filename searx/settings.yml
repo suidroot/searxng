@@ -196,16 +196,16 @@ outgoing:
   # are also supported: see
   #   https://2.python-requests.org/en/latest/user/advanced/#socks
   #
-  proxies:
-    all://:
-      - socks5h://127.0.0.1:9050
+  #proxies:
+  #  all://:
+  #    - socks5h://127.0.0.1:9050
 
   #  proxies:
   #    all://:
   #      - http://proxy1:8080
   #      - http://proxy2:8080
   #
-  using_tor_proxy: true
+  using_tor_proxy: false
   #
   # Extra seconds to add in order to account for the time taken by the proxy
   #
